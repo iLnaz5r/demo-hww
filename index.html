@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .mobile{
+    display: none;
+  }
+  .desktop-nav{
+    display: flex;
+    gap: 20px;
+  }
+  .burger{
+    display: none;
+  }
+  .cart-tap{
+    display: none;
+  }
+  .cart-tap.active{
+    display: flex;
+    background-color: bisque;
+    padding: 10px;
+    width: 300px;
+    height: 60vh;
+    position: absolute;
+    border-radius: 10px;
+    color: black;
+    margin-top: 40px;
+    margin-left: -100px;
+  }
+  .cart-tap-mobile{
+    display: none;
+  }
+  @media screen and (max-width:450px) {
+    .mobile{
+    display: flex;
+    gap: 10px;
+    }
+    .desktop-nav{
+      display: none;
+    }
+    .burger{
+      display: flex;
+      background-color: brown;
+    }
+    nav{
+      display: none;
+    }
+    nav.active{
+      display: flex;
+      flex-direction: column;
+      background-color: wheat;
+      color: brown;
+      padding: 20px;
+      width: 100px;
+      align-items: start;
+      z-index: 0;
+      gap: 20px;
+      height: 20vh;
+      position: absolute;
+      right: 0;
+      border: none;
+      border-radius: 20px;
+      margin-top: 30px;
+    }
+    .cart-tap-mobile{
+      display: none;
+    }
+    .cart-tap-mobile.active{
+      display: flex;
+      background-color: bisque;
+      padding: 10px;
+      width: 300px;
+      height: 60vh;
+      position: absolute;
+      border-radius: 10px;
+      color: black;
+      margin-top: 40px;
+      margin-left: -100px;
+    }
+
+    
+  }
+</style>
+<body>
+  <header style="display: flex; justify-content: space-between;background-color: black;color: white;padding: 10px;">
+    <h2>BookNest</h2>
+    <div class="desktop-nav" style="cursor: pointer;">
+      <p>Home</p>
+      <p>Browse</p>
+      <p class="cart">Cart<span class="amount"></span></p>
+      <div class="cart-tap">
+        <h5>Your rental card</h5>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="mobile">
+      <img class="cart-img" src="cart.svg">
+      <img class="burger" src="images/menu.svg">
+      <nav>
+        <p>Home</p>
+        <p>Browse</p>
+        <p>About</p>
+        <p>Contact</p>
+        <p class="cart">Cart<span class="amount"></span></p>
+        <div class="cart-tap-mobile">
+          <h5>Your rental card</h5>
+          <p></p>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <h1 style="padding: 20px;">Available Books</h1>
+  <div class="container" style="display: grid;grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;padding: 20px;gap: 10px;">
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img class="book-1984" src="book-1984.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-1984.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-hobbit.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-hobbit.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-mockingbird.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-mockingbird.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">mockingbird</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-pride.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-pride.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">pride</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-mobydick.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-mobydick.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">mobydick</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-warpeace.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-warpeace.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">warpeace</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-gatsby.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-gatsby.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">gatsby</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-catcher.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-catcher.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">catcher</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-bravenew.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-bravenew.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">bravenew</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-janeeyre.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-janeeyre.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">janeeyre</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-crime.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-crime.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">crime</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-anna.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-anna.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">anna</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-alchemist.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-alchemist.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">alchemist</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-lesmis.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-lesmis.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">lesmis</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <!-- <img src="book-donquixote.jpg" width="100px"> -->
+      <a href="1984.html" style="background-image: url(images/book-donquixote.jpg);background-size: cover;height: 27vh;">.</a>
+      <h2 class="book-name">donquixote</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BookNest - Rent Books</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  img{
+    cursor: pointer;
+  }
+  .nav{
+    display: block;
+  }
+  .burger{
+    display: none;
+    width: 20px;
+      height: 20px;
+  }
+  .cart-box{
+    display: none;
+  }
+  .cart-box.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(253, 226, 175);
+    color: black;
+    padding: 30px;
+    width: 350px;
+    margin-top: 50px;
+    margin-left: -200px;
+    border-radius: 20px;
+  }
+  button{
+    cursor: pointer;
+  }
+  @media screen and (max-width:450px) {
+    .box{
+      width: 300px;
+      align-items: center;
+    }
+    .nav{
+      display: none;
+    }
+    .burger{
+      display: flex;
+      z-index: 2;
+      width: 20px;
+      height: 20px;
+    }
+    .nav.active{
+      display:flex;
+      flex-direction: column;
+      right: 0;
+      top: 0;
+      background-color: white;
+      
+      width: 100px;
+      z-index: 0;
+      
+    }
+    .box.img{
+      width: 500px;
+    }
+  }
+
+</style>
+<body style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+  <header style="background-color: rgb(94, 92, 92); color: white;display: flex; justify-content: space-between;padding: 20px;">
+    <h4>BookNest</h4>
+    <div class="nav" style="display: flex; gap: 10px;">
+      <p>Home</p>
+      <p>Browse</p>
+      <p class="cart" style="cursor: pointer;">Cart<span class="numbers"></span></p>
+      <div class="cart-box">
+        <h2>Your rental card</h2>
+      </div>
+    </div>
+    <img class="burger" src="menu.svg">
+  </header>
+  <h1 style="padding: 20px;">Available Books</h1>
+  <div class="container" style="display: grid;grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;padding: 20px;gap: 10px;">
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img class="book-1984" src="book-1984.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-hobbit.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-mockingbird.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-pride.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-mobydick.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-warpeace.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-gatsby.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-catcher.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-bravenew.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-janeeyre.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-crime.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-anna.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-alchemist.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-lesmis.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+    <div class="box" style="display: flex; flex-direction: column;padding: 10px; border: 1px solid gray;gap: 7px;">
+      <img src="book-donquixote.jpg" width="100px">
+      <h2 class="book-name">1984</h2>
+      <p>by Author 1 $1.50 / day</p>
+      <button>Rent</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> -->

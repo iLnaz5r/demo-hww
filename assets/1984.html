@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .mobile{
+      display: none;
+    }
+    .desktop-nav{
+      display: flex;
+      gap: 20px;
+    }
+    .burger{
+      display: none;
+    }
+    @media screen and (max-width:450px) {
+      .mobile{
+      display: block;
+      }
+      .desktop-nav{
+        display: none;
+      }
+      .burger{
+        display: flex;
+        background-color: brown;
+      }
+      nav{
+        display: none;
+      }
+      nav.active{
+        display: flex;
+        flex-direction: column;
+        background-color: wheat;
+        color: brown;
+        padding: 20px;
+        width: 100px;
+        align-items: start;
+        z-index: 0;
+        gap: 20px;
+        height: 20vh;
+        position: absolute;
+        right: 0;
+        border: none;
+        border-radius: 20px;
+        margin-top: 30px;
+      }
+  
+      
+    }
+  </style>
+<body>
+    <header style="display: flex; justify-content: space-between;background-color: black;color: white;padding: 10px;">
+        <h2>BookNest</h2>
+        <div class="desktop-nav" style="cursor: pointer;">
+            <a href="index.html" style="text-decoration: none;color: white;">Home</a>
+          <p>Browse</p>
+          <p class="cart">Cart<span class="amount"></span></p>
+        </div>
+        
+        <div class="mobile">
+          <img class="burger" src="images/menu.svg">
+          <nav>
+            <a href="index.html">Home</a>
+            <p>Browse</p>
+            <p>About</p>
+            <p>Contact</p>
+            <p class="cart">Cart<span class="amount"></span></p>
+          </nav>
+        </div>
+      </header>
+    <div class="containerChange" style="display: flex; flex-direction: column;">
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-1984.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">1984 by George Orwell</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-hobbit.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">1984 by George Orwell</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-mockingbird.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">mockingbird</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-pride.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">pride</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-mobydick.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">mobydick</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-warpeace.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">warpeace</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-gatsby.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">gatsby</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-catcher.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">catcher</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-bravenew.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">bravenew</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-janeeyre.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">janeeyre</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-crime.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">crime</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-anna.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">Anna</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-alchemist.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">Alchemist</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+
+      <div class="box" style="display: flex; padding: 10px; border: 1px solid gray;gap: 7px;justify-content: space-between;">
+        <img  src="images/book-lesmis.jpg" width="100px">
+        <div class="text" style="display: flex;flex-direction: column;gap: 10px;">
+          <h2 class="book-name">Lesmis</h2>
+          <p>A chilling dystopian novel that explores the consequences of totalitarianism, mass surveillance, and repressive government control. Set in a bleak future where Big Brother watches every move, “1984” follows Winston Smith, a man who dares to question the regime and seeks truth in a world built on lies. Orwell’s masterpiece is a powerful warning about the loss of freedom and the dangers of unchecked political authority. A must-read classic that feels more relevant than ever.</p>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
